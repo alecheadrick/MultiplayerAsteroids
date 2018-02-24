@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		/*if (GameManager.firstPerson)
+		if (GameManager.firstPerson)
 		{
 			thirdPersonCam.SetActive(false);
 			firstPersonCam.SetActive(true);
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 		else {
 			thirdPersonCam.SetActive(true);
 			firstPersonCam.SetActive(false);
-		}*/
+		}
 
 		throttle = startingSpeed;
 		lastShotTime = Time.time - shotDelay;

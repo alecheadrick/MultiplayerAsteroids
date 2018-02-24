@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("Main");
 	}
+	public void LoadMenu() {
+		SceneManager.LoadScene("Menu");
+	}
 
 	#endregion
 }

@@ -28,6 +28,8 @@ public class PlayerHealth : MonoBehaviour {
 	public float health;
 	public float enemyDamage;
 	public Text healthText;
+	public GameObject gameOverObject;
+	public GameObject healthGameObject;
 	#endregion
 
 	#region Methods
@@ -53,7 +55,8 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void Die() {
-		Debug.Log("Player Died");
+		gameOverObject.SetActive(true);
+		healthGameObject.SetActive(false);
 	}
 	#endregion
 }

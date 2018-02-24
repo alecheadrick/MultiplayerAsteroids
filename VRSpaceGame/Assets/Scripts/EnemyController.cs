@@ -64,6 +64,11 @@ public class EnemyController : MonoBehaviour {
 		//Debug.Log("Shooting");
 		Instantiate(shot, shotPoint.transform.position, Quaternion.identity);
 	}
+
+	public void SelfDestruct() {
+		Debug.Log ("Enemy Hit");
+	}
+
 	
 	#endregion
 }

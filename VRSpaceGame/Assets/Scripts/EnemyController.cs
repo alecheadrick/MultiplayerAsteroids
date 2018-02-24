@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 	#region Variables
-	public GameObject dropPoint;
+	public GameObject[] dropPoints;
+	public Transform dropPointLocation;
 	Transform target;
 	bool atDropPoint = false;
 	public float speed;
@@ -15,11 +16,18 @@ public class EnemyController : MonoBehaviour {
 	bool withinRange = false;
 	public float AttackInterval = 3;
 	private float elapsedTime = 0;
+	int index;
 	#endregion
 
 	#region Methods
 	void Awake () {
 		target = GameObject.FindGameObjectWithTag("Player").transform;
+
+	}
+	private void Start()
+	{
+		index = Random.Range(0, dropPoints.Length);
+		dropPointLocation = dropPoints[index].transform;
 	}
 
 	void Update()
@@ -46,8 +54,8 @@ public class EnemyController : MonoBehaviour {
 
 	void MoveToDropPoint()
 	{
-		transform.position = Vector3.MoveTowards(transform.position, dropPoint.transform.position, speed);
-		if (transform.position == dropPoint.transform.position) {
+		transform.position = Vector3.MoveTowards(transform.position, dropPointLocation.position, speed);
+		if (transform.position == dropPointLocation.position) {
 			atDropPoint = true;
 		}
 	}

@@ -124,7 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17d7e1d4aca9674a8a34702704551e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPoint: {fileID: 1647418917581678, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
+  dropPoints:
+  - {fileID: 1903761930619852, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
+  - {fileID: 1412283243439506, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
+  - {fileID: 1647418917581678, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
+  dropPointLocation: {fileID: 0}
   speed: 0.02
   range: 20
   shotPoint: {fileID: 1616755490762866}

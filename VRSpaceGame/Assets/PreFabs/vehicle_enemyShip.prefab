@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1367419143004910}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 67.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4514703458820118}
   m_Father: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   - {fileID: 1412283243439506, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
   - {fileID: 1647418917581678, guid: 343981c730bfeaa4e842bc6fd0894598, type: 2}
   dropPointLocation: {fileID: 0}
-  speed: 0.02
+  speed: 0.25
   range: 20
   shotPoint: {fileID: 1616755490762866}
   shot: {fileID: 1963307218561718, guid: f0dac6a429142ec4a9882ab83aeaf660, type: 2}

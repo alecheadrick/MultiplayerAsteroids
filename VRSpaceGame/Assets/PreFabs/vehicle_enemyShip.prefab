@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33350085891441534}
   - component: {fileID: 23493492812264756}
   - component: {fileID: 114335464624823378}
+  - component: {fileID: 65993043393870002}
   m_Layer: 0
   m_Name: vehicle_enemyShip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367419143004910}
   m_Mesh: {fileID: 4300000, guid: 03cdeb1dfad9cfd488086a4c7e0b93bd, type: 3}
+--- !u!65 &65993043393870002
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367419143004910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4960114, y: 0.46537292, z: 1.4170403}
+  m_Center: {x: 0, y: -0.011736453, z: 0.3571211}
 --- !u!114 &114335464624823378
 MonoBehaviour:
   m_ObjectHideFlags: 1

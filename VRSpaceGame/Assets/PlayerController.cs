@@ -46,10 +46,10 @@ public class PlayerController : MonoBehaviour
 
 		float pitch = 0;
 		float yaw = 0;
-		float roll = 0;
+		
 		float x = GvrControllerInput.Orientation.eulerAngles.x;
 		float y = GvrControllerInput.Orientation.eulerAngles.y;
-		float z = GvrControllerInput.Orientation.eulerAngles.z;
+
 
 		if (x < 90)
 		{
@@ -66,36 +66,25 @@ public class PlayerController : MonoBehaviour
 
 		if (y < 90)
 		{
-			yaw = y / 90;
+			yaw = yaw / 90;
 		}
 		else if (y > 270)
 		{
-			yaw = -(360 - y) / 90;
+			yaw = (360 - y) / 90;
 		}
-		else
-		{
-			yaw = 0;
-		}
+		else if (y > 90){
 
-		if (z < 90)
-		{
-			roll = z / 90;
+			yaw = yaw * 90;
 		}
-		else if (z > 270)
-		{
-			roll = -(360 - z) / 90;
-		}
-		else
-		{
-			roll = 0;
-		}
+		Debug.Log("yaw is " + yaw);
 
 		this.transform.Rotate(
-			-1 * pitch * pitchSpeed * Time.deltaTime,
-			yaw * yawSpeed * Time.deltaTime,
-			-1 * roll * rollSpeed * Time.deltaTime
+			1 * pitch * pitchSpeed * Time.deltaTime,
+			-1 * yaw * yawSpeed * Time.deltaTime,
+			0
+			
 		);
-		Debug.Log("Pitch: " + pitch + ", Yaw: " + yaw);
+		//Debug.Log("Pitch: " + pitch + ", Yaw: " + yaw);
 
 		//		Quaternion targetRotation = Quaternion.Euler (
 		//			-GvrControllerInput.Orientation.eulerAngles.x,
@@ -124,11 +113,11 @@ public class PlayerController : MonoBehaviour
 		//		}
 
 		//		if (GvrControllerInput.IsTouching) {
-		throttle = 60 * (GvrControllerInput.TouchPosCentered.x);
+	//	throttle = 60 * (GvrControllerInput.TouchPosCentered.x);
 		//			Debug.Log (GvrControllerInput.TouchPosCentered.y + "/" + throttle);
 		//		}
 
-		this.transform.Translate(-1 * throttle * Time.deltaTime, 0, 0);
+	//	this.transform.Translate(1 * throttle * Time.deltaTime, 0, 0);
 
 		//		if (Input.GetAxis ("Fire2") == 1 && Time.time > lastShotTime + shotDelay) {
 		if (GvrControllerInput.ClickButton && Time.time > lastShotTime + shotDelay)
